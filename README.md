@@ -1,6 +1,6 @@
 # GitSnap
 
-[![PyPI version](https://badge.fury.io/py/git-snap.svg)](https://badge.fury.io/py/git-snap)
+[![PyPI version](https://img.shields.io/pypi/v/git-snap.svg)](https://pypi.org/project/git-snap/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **GitSnap** é uma aplicação gráfica (GUI) que transforma o `git` numa ferramenta de "snapshots" intuitiva e poderosa. Foi desenhada para simplificar o versionamento, focando-se na segurança e na facilidade de uso, tanto para projetos locais como para sincronização com o GitHub.
