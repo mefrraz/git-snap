@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/git-snap.svg)](https://badge.fury.io/py/git-snap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**GitSnap** é uma ferramenta com interface gráfica (TUI) que simplifica o uso do Git, transformando-o numa máquina de "snapshots" segura e fácil de usar. Foi desenhada para quem quer versionar projetos sem a complexidade dos comandos tradicionais do Git.
+**GitSnap** é uma ferramenta com interface gráfica (GUI) que simplifica o uso do Git, transformando-o numa máquina de "snapshots" segura e fácil de usar. Foi desenhada para quem quer versionar projetos sem a complexidade dos comandos tradicionais do Git.
 
 ![placeholder-screenshot](https://user-images.githubusercontent.com/12345/234567890-placeholder.png)
 *(Nota: Imagem de placeholder. Uma captura de ecrã real da aplicação será adicionada aqui.)*
@@ -12,11 +12,11 @@
 
 ## Funcionalidades Principais
 
--   **Interface Gráfica Intuitiva:** Gestão de snapshots através de uma TUI simples e direta.
+-   **Interface Gráfica (GUI):** Uma aplicação de desktop simples e direta para gerir os seus snapshots.
 -   **Snapshots com Um Clique:** Salve o estado atual do seu projeto com uma única ação.
 -   **Restauração Segura:** Volte a um estado anterior sem medo de perder trabalho. Um backup é criado automaticamente.
 -   **Inicialização Automática:** Se o seu projeto ainda não é um repositório Git, o GitSnap trata disso por si.
--   **Modo CLI:** Para quem prefere, também existe uma interface de linha de comando.
+-   **Modo CLI:** Para quem prefere, também existe uma interface de linha de comando como alternativa.
 
 ## Instalação
 
@@ -32,7 +32,7 @@ Após a instalação, pode executar a aplicação com o comando `git-snap`.
 
 ### Interface Gráfica (Recomendado)
 
-Para iniciar a interface principal, basta executar:
+Para iniciar a aplicação de desktop, basta executar:
 
 ```bash
 git-snap
