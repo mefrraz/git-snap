@@ -675,7 +675,7 @@ class AdvancedSnapshotViewWindow(QDialog):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Git Snapshot")
+        self.setWindowTitle("GitSnap")
         
         self.check_and_initialize_repo()
 
