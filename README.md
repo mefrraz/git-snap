@@ -5,7 +5,7 @@
 
 **GitSnap** é uma aplicação gráfica (GUI) que transforma o `git` numa ferramenta de "snapshots" intuitiva e poderosa. Foi desenhada para simplificar o versionamento, focando-se na segurança e na facilidade de uso, tanto para projetos locais como para sincronização com o GitHub.
 
-![GitSnap Interface](https://i.imgur.com/v8D4215.png)
+![GitSnap Interface](assets/interface.png)
 
 ---
 
