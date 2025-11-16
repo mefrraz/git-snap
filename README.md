@@ -5,7 +5,7 @@
 
 **GitSnap** é uma aplicação gráfica (GUI) que transforma o `git` numa ferramenta de "snapshots" intuitiva e poderosa. Foi desenhada para simplificar o versionamento, focando-se na segurança e na facilidade de uso, tanto para projetos locais como para sincronização com o GitHub.
 
-![GitSnap Interface](https://i.imgur.com/v8D4215.png)
+![GitSnap Interface](gitsnap/ui_gui/assets/interface.png)
 
 ---
 
@@ -15,41 +15,68 @@ Em vez do ciclo `add -> commit -> tag -> push`, o GitSnap utiliza o conceito de 
 
 ## Funcionalidades Principais
 
-### Gestão de Snapshots Locais
--   **Criar Snapshot:** Salve o estado atual de todos os ficheiros do seu projeto com uma única ação.
--   **Listar e Visualizar:** Veja um histórico limpo de todos os snapshots, com mensagens, datas e autores.
--   **Restaurar Snapshot:** Volte a um estado anterior de forma segura. O GitSnap cria um backup automático das suas alterações atuais antes de restaurar, garantindo que nada é perdido.
+-   **Gestão de Snapshots Locais:** Crie, liste, edite, e restaure "fotografias" do seu projeto.
+-   **Comparação Visual:** Compare o estado de um snapshot com a sua versão local ou compare dois snapshots entre si para ver as diferenças.
+-   **Sincronização com o GitHub:** Envie (Push) e receba (Pull) snapshots de e para um repositório remoto no GitHub.
+-   **Importar e Exportar:** Exporte snapshots para um ficheiro `.bundle` para backups offline ou importe-os noutra máquina.
 
-### Sincronização com o GitHub
--   **Push de Snapshots:** Envie um ou mais snapshots para um repositório remoto no GitHub para os manter seguros e partilhá-los com a sua equipa.
--   **Pull de Snapshots:** Descarregue snapshots de um repositório do GitHub para o seu ambiente local, sincronizando o seu trabalho.
+## Instalação e Uso
 
-### Importar e Exportar
--   **Exportar para Ficheiro:** Exporte um ou vários snapshots para um único ficheiro `.bundle`. Ideal para backups offline ou para partilhar versões de um projeto sem usar o GitHub.
--   **Importar de Ficheiro:** Importe snapshots a partir de um ficheiro `.bundle`, restaurando o histórico noutra máquina.
+#### Sistemas Operativos Suportados
+O GitSnap é construído com PySide6, o que o torna compatível com os principais sistemas operativos:
+-   **Windows**
+-   **macOS**
+-   **Linux**
 
-## Integração com o GitHub: Como usar Tokens
-
-Para sincronizar snapshots com o GitHub, o GitSnap utiliza um **Personal Access Token**. Isto é mais seguro do que usar a sua palavra-passe.
-
-#### Como gerar um Token no GitHub:
-1.  Vá à sua conta do GitHub e aceda a **Settings** > **Developer settings** > **Personal access tokens** > **Tokens (classic)**.
-2.  Clique em **Generate new token** (e depois **Generate new token (classic)**).
-3.  **Note:** Dê um nome ao token, como `gitsnap-token`.
-4.  **Expiration:** Defina uma data de expiração (ex: 90 dias).
-5.  **Select scopes:** Marque a caixa `repo`. Isto dá permissões para aceder e modificar repositórios.
-    ![GitHub Token Scopes](https://i.imgur.com/A6W303r.png)
-6.  Clique em **Generate token** e **copie o token gerado**. Guarde-o num local seguro.
-
-O GitSnap irá pedir este token na primeira vez que tentar fazer uma operação com o GitHub.
-
-## Instalação
-
-A forma recomendada de instalar o `git-snap` é através do `pipx`:
+#### Instalação
+A forma recomendada de instalar é através do `pipx`, que isola a aplicação do resto do sistema:
 ```bash
 pipx install git-snap
 ```
-Para executar a aplicação, basta usar o comando:
+
+#### Executar a Aplicação
+Após a instalação, pode iniciar a interface gráfica com o comando:
 ```bash
 git-snap
 ```
+
+## Atualização e Desinstalação
+
+#### Atualizar o GitSnap
+Para atualizar para a versão mais recente:
+```bash
+# Se instalou com pipx
+pipx upgrade git-snap
+
+# Se instalou com pip
+pip install --upgrade git-snap
+```
+
+#### Desinstalar o GitSnap
+Para remover completamente o programa:
+```bash
+# Se instalou com pipx
+pipx uninstall git-snap
+
+# Se instalou com pip
+pip uninstall git-snap
+```
+
+## Configuração
+
+#### Ficheiro de Configuração
+O GitSnap guarda as suas configurações (como nome de utilizador, email e URL do repositório) num ficheiro `config.json`. Pode encontrá-lo nos seguintes locais:
+-   **Linux/macOS:** `~/.gitsnap/config.json`
+-   **Windows:** `C:\Users\<SeuUtilizador>\.gitsnap\config.json`
+
+#### Integração com o GitHub: Tokens
+Para sincronizar com o GitHub, o GitSnap utiliza um **Personal Access Token**.
+
+**Como gerar um Token no GitHub:**
+1.  Vá a **GitHub Settings** > **Developer settings** > **Personal access tokens** > **Tokens (classic)**.
+2.  Clique em **Generate new token** (e depois **Generate new token (classic)**).
+3.  Dê um nome ao token (ex: `gitsnap-token`) e defina uma data de expiração.
+4.  Em **Select scopes**, marque a caixa `repo`.
+5.  Clique em **Generate token** e copie o token gerado.
+
+O GitSnap irá pedir este token na primeira vez que tentar fazer uma operação com o GitHub.

@@ -44,7 +44,7 @@ dependencies = [
 where = ["."]
 
 [tool.setuptools.package-data]
-"gitsnap.ui_gui.assets" = ["*.qss", "*.md"]
+"gitsnap.ui_gui.assets" = ["*.qss", "*.md", "*.png"]
 
 [project.optional-dependencies]
 test = [
